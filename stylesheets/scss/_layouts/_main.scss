@@ -1,0 +1,22 @@
+#tf-app{
+	position: fixed;
+	top : 0px;
+	left : 0px;
+	right : 0px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: column;
+}
+#tf-app-body{
+	flex : 1;
+	display: flex;
+	flex-flow: row wrap;
+}
+#tf-app-body-content{
+	flex : 1;
+	overflow : auto;
+}
+#tf-app-footer{
+	height: 0px;
+	background-color: $color-layout-pri;
+}

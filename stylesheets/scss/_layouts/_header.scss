@@ -1,0 +1,44 @@
+#tf-app-header{
+	display: flex;
+	flex-flow : row wrap;
+	height: 70px;
+	background-color: $color-layout-pri;
+	box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#tf-app-header-menu-btn, #tf-app-header-logout, #tf-app-header-complaints{
+	width : 70px;
+	transition: background-color 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#tf-app-header-menu-btn:hover, #tf-app-header-logout:hover, #tf-app-header-complaints:hover{
+	background-color: $color-layout-sec;
+	cursor : pointer;
+}
+
+#tf-app-header-logo{
+	flex : 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+#tf-app-header-content{
+	flex : 3;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imgMenuBtn{
+	@include navImg("../../images/icons/HamburgerMenuBtn.png");
+}
+.imgViewComplaint{
+	@include navImg("../../images/icons/Notification.png");	
+}
+.imgSignOut{
+	@include navImg("../../images/icons/SignOut.png");		
+}

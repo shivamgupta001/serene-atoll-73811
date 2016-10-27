@@ -1,0 +1,23 @@
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+@mixin navImg ($src){
+  background: url($src) no-repeat; 
+  background-size : 25px 25px;
+  width: 25px;
+  height : 25px;
+  display: inline-block;
+  margin: 5px;
+}

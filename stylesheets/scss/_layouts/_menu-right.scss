@@ -1,0 +1,66 @@
+$menu-right-width: 50px;
+
+#tf-app-body-right-menu{
+	width : $menu-right-width;
+	display: flex;
+	flex-flow: row wrap;
+	transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	position : fixed;
+	top : 70px;  /*Same height as header*/
+	bottom: 0px;   /*Same height as footer*/
+	right : 0px;
+	
+
+	ul{
+		list-style-type: none;
+		width : $menu-right-width;
+		margin: 0px;
+		padding: 0px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		li{
+			width: $menu-right-width;
+			height: 50px;
+			background-color: $color-layout-pri;
+			margin-top: 3px;
+			transition: background-color 0.2s;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		li:hover{
+			background-color: $color-layout-sec;
+			cursor: pointer;
+			z-index: 10;
+		}
+	}
+	
+	
+	
+}
+#tf-app-body-right-menu-content{
+	flex : 1;
+	background-color: $color-layout-pri;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+	
+.tf-app-body-right-menu--width{
+	width: 300px !important;
+}
+.imgUrgentMessage{
+	@include navImg("../../images/icons/UrgentMessages.png");
+}
+.imgEditMessage{
+	@include navImg("../../images/icons/editMessage.png");
+}
+.imgWarningMessage{
+	@include navImg("../../images/icons/warningMessage.png");
+}
+.imgExpandCollapse{
+	@include navImg("../../images/icons/expandCollapse.png");	
+}

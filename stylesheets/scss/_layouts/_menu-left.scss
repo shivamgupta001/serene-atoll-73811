@@ -1,0 +1,175 @@
+#tf-app-body-left-menu{
+	background-color: $color-layout-pri;
+}
+
+/* nav bar  common*/
+#tf-app-body-left-menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+#tf-app-body-left-menu a{
+	text-decoration: none;
+	display: inline-flex;
+	padding : 10px;
+	color: $color-layout-text;
+	align-items: center;
+}
+
+
+.navBar{
+	margin : 0px;
+	padding : 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: $color-layout-pri;
+	transition: width 0.2s ease-in-out , opacity  0.2s ease-in-out, visibility 0.1s;
+	font-family: $font-layout-stack;
+	box-shadow: 7px 0px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*width small*/
+.navBar--width-small {
+	width : 70px;
+
+}
+.navBar--width-small .navDropdown{
+	justify-content: center;
+}
+.navBar--width-small .navDropdown>a span:last-child{
+	display: none;
+}
+
+
+/*width medium*/
+.navBar--width-medium{
+	width : 200px;
+	position: fixed;
+	top : 70px;  /*Same height as header*/
+	bottom: 0px;   /*Same height as footer*/
+}
+/* .navBar--width-medium  .navDropdown>a span:first-child{
+	display: none;
+} */			    
+
+
+.navDropdown{
+	display: flex;
+	justify-content: flex-start;
+	width: inherit;
+	transition: background-color 0.2s, opacity 0.2s;
+	opacity: 0.8;
+	
+}		
+.navDropdown:hover{
+	background-color: $color-layout-sec;
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+	z-index: 10;
+	opacity: 1;
+	cursor: pointer;
+}
+		
+/* dropdown first level */ 
+.navDropDownContent{
+	visibility: hidden;
+	display: inline-block;
+	opacity: 0;
+	transition: visibility 0.5s, opacity 0.5s linear;
+	position: absolute;
+	background-color: $color-layout-pri;
+	width: 180px;
+	left : 100%;
+	box-shadow: 7px 0px 12px 0px rgba(0, 0, 0, 0.2);
+}
+.navBar--width-small .navDropdown > .navDropDownContent{
+	left: 70px; /*Same as width of navBar*/
+}
+.navDropDownContent li{
+	box-shadow: 0 0 0 1px $color-layout-pri inset;
+	transition : background-color 0.2s, opacity 0.2s;
+	opacity: 0.8;
+}
+.navDropDownContent li a{
+	color: white !important;
+	font: 11px Arial !important;
+}
+.navDropDownContent li:hover{
+	background-color: $color-layout-sec;
+	z-index: 5;
+	opacity: 1;
+	cursor: pointer;
+}
+		
+.navDropdown:hover>.navDropDownContent , .navDropDownContent:hover{
+	visibility: visible;
+	opacity: 1;
+}
+		
+/* other than first level drop down */ 
+.allignNavDropDownLeft{
+	left:100%;
+	display: table;
+}
+.navAnchorRight{
+	display: flex;
+}
+.navAnchorRight>a{
+	opacity : 0.8;
+	cursor : default;
+}
+.navAnchorRight:hover>.navDropDownContent{
+	visibility: visible;
+	opacity: 1;
+}
+.navAnchorRight>a::after{
+	content : '\276F';
+	position: absolute;
+	right : 5px;
+}
+.navDropDownContent .active{
+	cursor: default;
+	opacity : 0.8;
+}
+.navHide{
+	width: 0px !important;
+	visibility: hidden !important;
+}
+#navFooter{
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	bottom: 10px;
+	opacity: 0.8;
+}
+#navFooter:hover{
+	cursor: pointer;
+	opacity: 1;
+	background-color: $color-layout-sec;
+}
+.imgInvoice{
+	@include navImg("../../images/icons/Invoice.png");
+}
+.imgSettings{
+	@include navImg("../../images/icons/Settings.png");
+}
+.imgRatesFees{
+	@include navImg("../../images/icons/RatesFees.png");	
+}
+.imgReports{
+	@include navImg("../../images/icons/Report.png");		
+}
+.imgCustomerCare{
+	@include navImg("../../images/icons/customerCare.png");			
+}
+.imgCompliance{
+	@include navImg("../../images/icons/compliance.png");				
+}
+.imgSecurity{
+	@include navImg("../../images/icons/Security.png");					
+}
+.imgBillPay{
+	@include navImg("../../images/icons/BillPay.png");						
+}
