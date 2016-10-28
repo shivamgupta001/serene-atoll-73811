@@ -139,7 +139,7 @@ ol {
   transition: background-color 0.2s, opacity 0.2s;
   opacity: 0.8; }
 
-.navDropdown:hover {
+.navDropdown:hover, .navDropdown:focus {
   background-color: #1b9bff;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
   z-index: 10;
@@ -177,7 +177,7 @@ ol {
   opacity: 1;
   cursor: pointer; }
 
-.navDropdown:hover > .navDropDownContent, .navDropDownContent:hover {
+.navDropdown:hover > .navDropDownContent, .navDropDownContent:hover, .navDropdown:focus > .navDropDownContent, .navDropDownContent:focus {
   visibility: visible;
   opacity: 1; }
 
@@ -285,6 +285,12 @@ ol {
   height: 25px;
   display: inline-block;
   margin: 5px; }
+
+.navKeyNav {
+  width: inherit;
+  height: inherit;
+  padding: 5px;
+  background-color: yellow; }
 
 #tf-app-body-right-menu {
   width: 50px;

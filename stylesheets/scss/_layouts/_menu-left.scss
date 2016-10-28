@@ -64,7 +64,7 @@
 	opacity: 0.8;
 	
 }		
-.navDropdown:hover{
+.navDropdown:hover, .navDropdown:focus{
 	background-color: $color-layout-sec;
 	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 	z-index: 10;
@@ -103,7 +103,7 @@
 	cursor: pointer;
 }
 		
-.navDropdown:hover>.navDropDownContent , .navDropDownContent:hover{
+.navDropdown:hover>.navDropDownContent , .navDropDownContent:hover, .navDropdown:focus>.navDropDownContent , .navDropDownContent:focus{
 	visibility: visible;
 	opacity: 1;
 }
@@ -172,4 +172,10 @@
 }
 .imgBillPay{
 	@include navImg("../../images/icons/BillPay.png");						
+}
+.navKeyNav{
+	width : inherit;
+	height: inherit;
+	padding : 5px;
+	background-color: yellow;
 }
