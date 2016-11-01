@@ -175,7 +175,7 @@
 		
 			<!-- app body content -->
 			<section id="tf-app-body-content">
-			Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section 
+			
 			</section>
 		
 			<!-- app right menu bar -->
@@ -199,26 +199,66 @@
 	<script src="javascript/tf-header.js"></script>	
 	<script src="javascript/tf-left-menu.js"></script>
 	<script src="javascript/tf-right-menu.js"></script>
+	<style>
+	.navActive{
+		background-color: #1b9bff;
+	}
+	</style>
 	<script>
 		var navLists = document.getElementsByClassName('navDropdown');
 		Array.prototype.forEach.call(navLists, function(val , index){
 			val.setAttribute("tabindex",index+1);
 		});
 		Array.prototype.forEach.call(navLists, function(val , index){
-			val.addEventListener('keyup', function(e){
+			val.addEventListener('keydown', function(e){
 				if(e.keyCode === 9){
 					this.focus();
-					this.addEventListener('keyup', function(e){
-						debugger;
-					});
-					var list = this.getElementsByClassName('navDropDownContent');
-					Array.prototype.forEach.call(list , function(val , index){
-						val.addEventListener('keyup', function(e){
-							debugger;
-						});
-					});
 				}
-
+				var childList = this.querySelector('.navDropDownContent');
+				if(childList && childList.children && childList.children.length > 0){
+					
+					if(e.keyCode === 39){
+						this.focus();
+						var current = this.querySelector('.navActive');
+						if(current){
+							if(current.classList.contains('navAnchorRight')){
+								var newList = current.querySelector('.navDropDownContent');
+								var ele = newList.children[0];
+								ele.classList.add('navActive');			
+							}
+						}else{
+							var ele = childList.children[0];
+							ele.classList.add('navActive');		
+						}
+						
+					}else if(e.keyCode  === 38){
+						this.focus();
+						var current , prev;
+						var current = this.querySelector('.navActive');
+						if(current){
+							prev = current.previousElementSibling;
+							if(prev != null){
+								current.classList.remove('navActive');
+							 	prev.classList.add('navActive');	
+							}	
+						}
+						
+						
+					}else if(e.keyCode === 40){
+						this.focus();
+						var current , next;
+						var current = this.querySelector('.navActive');
+						if(current){
+							next = current.nextElementSibling;
+							if(next != null){
+								current.classList.remove('navActive');
+							 	next.classList.add('navActive');	
+							}	
+						}
+						
+					}
+					
+				}
 			});
 
 		});
