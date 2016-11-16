@@ -53,13 +53,13 @@ $menu-right-width: 50px;
 	width: 300px !important;
 }
 .imgUrgentMessage{
-	@include navImg("../../images/icons/UrgentMessages.png");
+	@include navImgNotification("../../images/icons/UrgentMessages.png");
 }
 .imgEditMessage{
 	@include navImg("../../images/icons/editMessage.png");
 }
 .imgWarningMessage{
-	@include navImg("../../images/icons/warningMessage.png");
+	@include navImgNotification("../../images/icons/warningMessage.png");
 }
 .imgExpandCollapse{
 	@include navImg("../../images/icons/expandCollapse.png");	
