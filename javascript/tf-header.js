@@ -22,6 +22,7 @@ menuBtn.addEventListener('click', function(){
 		if(navbar.classList.contains('navHide')){
 			setTimeout(function(){ 
 				navbar.classList.remove('navHide');
+				navbar.classList.remove('navBar--width-small');
 				navbar.classList.add('navBar--width-medium');
 			}, 100);	
 		}else{
