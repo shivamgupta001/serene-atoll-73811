@@ -53,13 +53,13 @@ $menu-right-width: 50px;
 	width: 300px !important;
 }
 .imgUrgentMessage{
-	@include navImgNotification("../../images/icons/UrgentMessages.png");
+	@include navImgNotification("../../images/icons/UrgentMessages.png" , rgb(107,200,255));
 }
 .imgEditMessage{
 	@include navImg("../../images/icons/editMessage.png");
 }
 .imgWarningMessage{
-	@include navImgNotification("../../images/icons/warningMessage.png");
+	@include navImgNotification("../../images/icons/warningMessage.png", red);
 }
 .imgExpandCollapse{
 	@include navImg("../../images/icons/expandCollapse.png");	
