@@ -37,7 +37,7 @@
 	@include navImg("../../images/icons/HamburgerMenuBtn.png");
 }
 .imgViewComplaint{
-	@include navImg("../../images/icons/Notification.png");	
+	@include navImgNotification("../../images/icons/Notification.png");	
 }
 .imgSignOut{
 	@include navImg("../../images/icons/SignOut.png");		
