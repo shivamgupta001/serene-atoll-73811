@@ -21,6 +21,17 @@
   display: inline-block;
   margin: 5px;
 }
+
+@mixin positionAbsolute (){
+  
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  right : 0px;
+  bottom : 0px;
+} 
+
+
 @mixin navImgNotification ($src , $bg-col){
   background: url($src) no-repeat; 
   background-size : 25px 25px;

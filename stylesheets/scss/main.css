@@ -8,7 +8,7 @@ ol {
 #tf-app-header {
   display: flex;
   flex-flow: row wrap;
-  height: 70px;
+  height: 56px;
   background-color: #0056a5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
@@ -89,7 +89,8 @@ ol {
 
 #tf-app-body-content {
   flex: 1;
-  overflow: auto; }
+  overflow: auto;
+  position: relative; }
 
 #tf-app-footer {
   height: 0px;
@@ -455,5 +456,20 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%; }
+
+.createInvoiceHeader {
+  height: 48px;
+  background-color: #465a6e; }
+
+.createInvoiceBody {
+  background-color: green;
+  flex: 1; }
+
+.tf-position--abs0000 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
 
 /*# sourceMappingURL=main.css.map */

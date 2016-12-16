@@ -7,6 +7,7 @@
 	<title>TF Nav</title>
 
 	<link rel="stylesheet" type="text/css" href="stylesheets/scss/main.css">
+	<link rel="stylesheet" type="text/css" href="../ulibLast-master/css/tflib.controls.css">
 	
 </head>
 
@@ -175,7 +176,6 @@
 		
 			<!-- app body content -->
 			<section id="tf-app-body-content">
-			Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section Start section 
 			</section>
 		
 			<!-- app right menu bar -->
@@ -199,5 +199,143 @@
 	<script src="javascript/tf-header.js"></script>	
 	<script src="javascript/tf-left-menu.js"></script>
 	<script src="javascript/tf-right-menu.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="../ulibLast-master/dest/tflib.controls.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+
+			/* create invoice header start*/
+			var searchLabel = TFLib.TFContainer.call({
+
+				tagName : 'label',
+				innerText : 'SEARCH CUSTOMER',
+				styles : {
+					display: 'flex',
+				    alignSelf: 'center',
+				    flex: 1,
+				    justifyContent: 'center'
+				}
+			});
+
+			var senderName = TFLib.TFComboboxField.call({
+
+				displayLabel : 'none',
+				styles : {
+					flex : 1,
+					justifyContent :'center'
+				}
+			});
+
+			var senderSearch = TFLib.TFTextField.call({
+
+				displayLabel : 'none',
+				styles : {
+					flex : 1,
+					justifyContent :'center'
+				}
+			});
+
+			var countryRate = TFLib.TFTextField.call({
+
+				displayLabel: 'none',
+				styles : {
+					flex : 1,
+					justifyContent :'center'
+				}
+			});
+
+			var lastInvoice = TFLib.TFContainer.call({
+
+				tagName : 'a',
+				styles : {
+
+					flex : 1,
+					display : 'flex',
+					alignSelf : 'center',
+					justifyContent : 'center'
+				},
+				innerText : 'Last Invoice'
+			});
+			/* create invoice header end*/
+
+			/*create invoice body block 1  start*/
+
+			var senderInfoLabel = TFLib.TFContainer.call({
+
+				innerText : 'Step1 : SENDER INFORMATION'
+			})
+			/*create invoice body block 1  end*/
+
+			TFLib.Iterator({
+
+				// create invoice
+				compClass : 'tf-position--abs0000',
+				layout : 'column',
+				items : [{
+
+					// header
+					compClass : 'createInvoiceHeader',
+					layout : 'row',
+					items : [{
+						flex : 1,
+						layout : 'row',
+						items : [
+							
+							searchLabel,
+							senderName,
+							senderSearch
+												
+						]	
+					},{
+						styles : {
+							width : '2px',
+							backgroundColor : 'white'
+						}
+					},{
+						flex : 1,
+						layout : 'row',
+						items : [
+
+							countryRate,
+							lastInvoice
+						]
+					}]
+					
+				},{
+
+					//body
+					compClass : 'createInvoiceBody',
+					layout : 'row',
+					items : [{
+						flex : 1,
+						styles : {
+							backgroundColor : 'red'
+						},
+						items : [{
+
+						},{
+
+						}]
+					},{
+						styles : {
+							width : '2px',
+							backgroundColor : 'white'
+						}
+					},{
+						flex : 1,
+						styles : {
+							backgroundColor : 'blue'
+						},
+						items : [{
+
+						},{
+
+						}]
+					}]
+
+				}]
+			}).appendTo('#tf-app-body-content');
+		})();
+	</script>
 </body>
 </html>
