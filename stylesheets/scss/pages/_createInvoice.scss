@@ -5,10 +5,21 @@
 }
 .createInvoiceBody{
 	
-	background-color: green;
+	background-color : #E7EAEC;
 	flex : 1;
+	overflow : auto;
+}
+.createInvoiceLabel{
+	display: flex;
+	justify-content: center;
+	background-color: #505a6e;
 }
 .tf-position--abs0000{
 
 	@include positionAbsolute()
+}
+.demoText{
+	min-height : 30px;
+	background-color : white;
+	margin : 2px;
 }

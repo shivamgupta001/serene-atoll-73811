@@ -258,13 +258,48 @@
 			});
 			/* create invoice header end*/
 
-			/*create invoice body block 1  start*/
+
+
+			/*create invoice body SENDER INFORMATION  start*/
 
 			var senderInfoLabel = TFLib.TFContainer.call({
 
-				innerText : 'Step1 : SENDER INFORMATION'
-			})
-			/*create invoice body block 1  end*/
+				innerText : 'Step1 : SENDER INFORMATION',
+				compClass : 'createInvoiceLabel'
+			});
+
+			/*create invoice body SENDER INFORMATION  end*/
+
+
+			/*create invoice body RECEIVER INFORMATION  start*/
+
+			var receiverInfoLabel = TFLib.TFContainer.call({
+
+				innerText : 'Step2 : RECEIVER INFORMATION',
+				compClass : 'createInvoiceLabel'
+			});
+			
+			/*create invoice body RECEIVER INFORMATION  end*/
+
+			/*create invoice body RECEIVER DETAIL  start*/
+
+			var receiverDetailLabel = TFLib.TFContainer.call({
+
+				innerText : 'Step2 : RECEIVER DETAIL',
+				compClass : 'createInvoiceLabel'
+			});
+			
+			/*create invoice body RECEIVER DETAIL  end*/
+
+			/*create invoice body PAYOUT DETAIL  start*/
+
+			var payoutDetailLabel = TFLib.TFContainer.call({
+
+				innerText : 'Step2 : PAYOUT DETAIL',
+				compClass : 'createInvoiceLabel'
+			});
+			
+			/*create invoice body PAYOUT DETAIL  end*/
 
 			TFLib.Iterator({
 
@@ -308,14 +343,281 @@
 					layout : 'row',
 					items : [{
 						flex : 1,
-						styles : {
-							backgroundColor : 'red'
-						},
+						layout : 'column',
 						items : [{
+
+							// sender information
+							
+							styles : {
+								backgroundColor : 'yellow',
+								margin : '5px'
+							},
+							
+							items : [
+
+								senderInfoLabel,
+								{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								}
+
+							]
 
 						},{
 
+							// receiver detail
+							
+							styles : {
+								backgroundColor : 'yellow',
+								margin : '5px'
+							},
+							
+							items : [
+
+								receiverDetailLabel,
+								{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								}
+							]
+
 						}]
+					},{
+						styles : {
+							width : '3px',
+							opacity : 0.5,
+							border : '1px solid #465a6e'
+						}
+					},{
+						flex : 1,
+						layout : 'column',
+						items : [{
+
+							// receiver information 
+							
+							styles : {
+								backgroundColor : 'yellow',
+								margin : '5px'
+							},
+							
+							items : [
+
+								receiverInfoLabel,
+								{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								}
+							]
+						},{
+
+							//payout details
+							
+							styles : {
+								backgroundColor : 'yellow',
+								margin : '5px'
+							},
+							
+							items : [
+
+								payoutDetailLabel,
+								{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									compClass : "demoText"
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								},{
+									flex : 1,
+									type : 'textfield',
+									compClass : "demoText",
+									fieldLabel : 'Create Invoice'
+								}
+							]
+						}]
+					}]
+
+				},{
+					// footer
+					compClass : 'createInvoiceHeader',
+					layout : 'row',
+					items : [{
+						flex : 1,
+						layout : 'row',
+						items : [
+							
+							
+												
+						]	
 					},{
 						styles : {
 							width : '2px',
@@ -323,16 +625,12 @@
 						}
 					},{
 						flex : 1,
-						styles : {
-							backgroundColor : 'blue'
-						},
-						items : [{
+						layout : 'row',
+						items : [
 
-						},{
-
-						}]
+							
+						]
 					}]
-
 				}]
 			}).appendTo('#tf-app-body-content');
 		})();

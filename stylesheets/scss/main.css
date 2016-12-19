@@ -462,8 +462,14 @@ input:checked + .slider:before {
   background-color: #465a6e; }
 
 .createInvoiceBody {
-  background-color: green;
-  flex: 1; }
+  background-color: #E7EAEC;
+  flex: 1;
+  overflow: auto; }
+
+.createInvoiceLabel {
+  display: flex;
+  justify-content: center;
+  background-color: #505a6e; }
 
 .tf-position--abs0000 {
   position: absolute;
@@ -471,5 +477,10 @@ input:checked + .slider:before {
   left: 0px;
   right: 0px;
   bottom: 0px; }
+
+.demoText {
+  min-height: 30px;
+  background-color: white;
+  margin: 2px; }
 
 /*# sourceMappingURL=main.css.map */
