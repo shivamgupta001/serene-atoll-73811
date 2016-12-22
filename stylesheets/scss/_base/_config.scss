@@ -1,12 +1,39 @@
+
 $color-layout-pri : #0056a5;
 $color-layout-sec : #1b9bff;
+$color-layout-ter : #465a6e;
+$color-layout-qua : #328cc8;
 
+
+//text color for layout
 $color-layout-text : white;
 
-$font-layout-stack : arial, helvetica , sans-serif;
+$color-notify-bg-1 : #6bc8ff;
+$color-notify-bg-2 : red;
+$color-notify-bg-3 : blue;
 
+
+
+// font stack used
+$font-layout-stack : Loto, helvetica , sans-serif;
+
+
+// various font-size used
+$font-size-smaller : 10px; 
 $font-size-small : 12px;
 $font-size-medium: 14px;
 $font-size-large : 16px;
 
+
+// paths to images
+$img-icons-vertical : "../img/icons/vertical/";
+
+$svg-icons-menu-left : "../svg/menu-left/";
+$svg-icons-menu-right : "../svg/menu-right/";
+$svg-icons-header : "../svg/header/";
+
+$img-icons-sprites : "../css/images/";
+
+// box-shadow standard used in app
 $box-shadow-layout :  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$box-shadow-layout-1 :  7px 0px 12px 0px rgba(0, 0, 0, 0.2);

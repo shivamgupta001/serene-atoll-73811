@@ -13,27 +13,25 @@
   }
 }
 
-@mixin navImg ($src){
-  background: url($src) no-repeat; 
+@mixin navImg ($src, $path : $img-icons-vertical){
+  
+  background: url($path + $src) no-repeat; 
   background-size : 25px 25px;
   width: 25px;
   height : 25px;
   display: inline-block;
   margin: 5px;
 }
-
-@mixin positionAbsolute (){
+@mixin navImgSprite($src, $path : $img-icons-vertical){
   
-  position : absolute;
-  top : 0px;
-  left : 0px;
-  right : 0px;
-  bottom : 0px;
-} 
+  background: url($path + $src) no-repeat; 
+  width: 25px;
+  height : 25px;
+  margin: 5px; 
+}
 
-
-@mixin navImgNotification ($src , $bg-col){
-  background: url($src) no-repeat; 
+@mixin navImgNotification ($src , $path : $img-icons-vertical , $bgCol : $color-notify-bg-1){
+  background: url($path + $src) no-repeat; 
   background-size : 25px 25px;
   width: 25px;
   height : 25px;
@@ -41,16 +39,63 @@
   margin: 5px;
   &::before{
         content: attr(data-val);
-        background-color: $bg-col;
-        border : 1px solid black;
-        color: white;
+        background-color: $bgCol;
         border : 1px solid grey;
-        border-radius: 50%;
-        padding: 0.3em;
+        border-radius: 14px;
+        min-width: 14px;
+        min-height: 14px;
+        text-align: center;
+        padding: 0.2em;
         position: absolute;
+        color : $color-layout-text;
         box-shadow : $box-shadow-layout;
-        transform: translate(-10px, -10px);
+        transform: translate(-8px, -8px);
         font-family: $font-layout-stack;
         font-size: $font-size-small;
   }
+}
+@mixin positionAbsolute(){
+  position: absolute;
+  top : 0px;
+  left : 0px;
+  right : 0px;
+  bottom : 0px;
+}
+@mixin positionFixed(){
+  position: fixed;
+  top : 0px;
+  left : 0px;
+  right : 0px;
+  bottom : 0px;
+}
+@mixin perfectCenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin verticalCenter(){
+  display : flex;
+  align-items : center;
+  justify-content: flex-start;
+}
+@mixin horizontalCenter(){
+  display : flex;
+  justify-content: center;
+}
+@mixin fontStackBold(){
+  
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-family: $font-layout-stack;
+}
+@mixin flexRow(){
+
+  display : flex;
+  flex-flow : row wrap;
+}
+@mixin flexColumn(){
+
+  display : flex;
+  flex-direction : column;
 }

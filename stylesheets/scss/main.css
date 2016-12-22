@@ -26,18 +26,15 @@ ol {
 #tf-app-header-logo {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start; }
 
 #tf-app-header-content {
-  flex: 3;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  padding: 2px 0px;
+  text-align: right; }
 
 .imgMenuBtn {
-  background: url("../../images/icons/HamburgerMenuBtn.png") no-repeat;
+  background: url("../svg/header/menu.svg") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -45,7 +42,7 @@ ol {
   margin: 5px; }
 
 .imgViewComplaint {
-  background: url("../../images/icons/Notification.png") no-repeat;
+  background: url("../svg/header/bell.svg") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -54,24 +51,28 @@ ol {
   .imgViewComplaint::before {
     content: attr(data-val);
     background-color: blue;
-    border: 1px solid black;
-    color: white;
     border: 1px solid grey;
-    border-radius: 50%;
-    padding: 0.3em;
+    border-radius: 14px;
+    min-width: 14px;
+    min-height: 14px;
+    text-align: center;
+    padding: 0.2em;
     position: absolute;
+    color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: translate(-10px, -10px);
-    font-family: arial, helvetica, sans-serif;
+    transform: translate(-8px, -8px);
+    font-family: Loto, helvetica, sans-serif;
     font-size: 12px; }
 
-.imgSignOut {
-  background: url("../../images/icons/SignOut.png") no-repeat;
-  background-size: 25px 25px;
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  margin: 5px; }
+#tf-app-header-logout {
+  color: white;
+  text-align: center; }
+
+#tf-app-header-logout a {
+  color: white;
+  line-height: 56px;
+  text-decoration: none;
+  width: 100%; }
 
 #tf-app {
   position: fixed;
@@ -89,8 +90,8 @@ ol {
 
 #tf-app-body-content {
   flex: 1;
-  overflow: auto;
-  position: relative; }
+  position: relative;
+  background-color: #465a6e; }
 
 #tf-app-footer {
   height: 0px;
@@ -121,7 +122,7 @@ ol {
   justify-content: flex-start;
   background-color: #0056a5;
   transition: width 0.2s ease-in-out , opacity  0.2s ease-in-out, visibility 0.1s;
-  font-family: arial, helvetica, sans-serif;
+  font-family: Loto, helvetica, sans-serif;
   box-shadow: 7px 0px 12px 0px rgba(0, 0, 0, 0.2); }
 
 /*width small*/
@@ -237,7 +238,7 @@ ol {
   background-color: #1b9bff; }
 
 .imgInvoice {
-  background: url("../../images/icons/Invoice.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/Invoice.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -245,7 +246,7 @@ ol {
   margin: 5px; }
 
 .imgSettings {
-  background: url("../../images/icons/Settings.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/Settings.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -253,7 +254,7 @@ ol {
   margin: 5px; }
 
 .imgRatesFees {
-  background: url("../../images/icons/RatesFees.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/RatesFees.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -261,7 +262,7 @@ ol {
   margin: 5px; }
 
 .imgReports {
-  background: url("../../images/icons/Report.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/Report.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -269,7 +270,7 @@ ol {
   margin: 5px; }
 
 .imgCustomerCare {
-  background: url("../../images/icons/customerCare.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/customerCare.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -277,7 +278,7 @@ ol {
   margin: 5px; }
 
 .imgCompliance {
-  background: url("../../images/icons/compliance.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/compliance.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -285,7 +286,7 @@ ol {
   margin: 5px; }
 
 .imgSecurity {
-  background: url("../../images/icons/Security.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/Security.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -293,7 +294,7 @@ ol {
   margin: 5px; }
 
 .imgBillPay {
-  background: url("../../images/icons/BillPay.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/BillPay.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -351,7 +352,7 @@ ol {
   width: 300px !important; }
 
 .imgUrgentMessage {
-  background: url("../../images/icons/UrgentMessages.png") no-repeat;
+  background: url("#6bc8ff../../images/icons/UrgentMessages.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -360,19 +361,21 @@ ol {
   .imgUrgentMessage::before {
     content: attr(data-val);
     background-color: #6bc8ff;
-    border: 1px solid black;
-    color: white;
     border: 1px solid grey;
-    border-radius: 50%;
-    padding: 0.3em;
+    border-radius: 14px;
+    min-width: 14px;
+    min-height: 14px;
+    text-align: center;
+    padding: 0.2em;
     position: absolute;
+    color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: translate(-10px, -10px);
-    font-family: arial, helvetica, sans-serif;
+    transform: translate(-8px, -8px);
+    font-family: Loto, helvetica, sans-serif;
     font-size: 12px; }
 
 .imgEditMessage {
-  background: url("../../images/icons/editMessage.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/editMessage.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -380,7 +383,7 @@ ol {
   margin: 5px; }
 
 .imgWarningMessage {
-  background: url("../../images/icons/warningMessage.png") no-repeat;
+  background: url("red../../images/icons/warningMessage.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;
@@ -388,20 +391,22 @@ ol {
   margin: 5px; }
   .imgWarningMessage::before {
     content: attr(data-val);
-    background-color: red;
-    border: 1px solid black;
-    color: white;
+    background-color: #6bc8ff;
     border: 1px solid grey;
-    border-radius: 50%;
-    padding: 0.3em;
+    border-radius: 14px;
+    min-width: 14px;
+    min-height: 14px;
+    text-align: center;
+    padding: 0.2em;
     position: absolute;
+    color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: translate(-10px, -10px);
-    font-family: arial, helvetica, sans-serif;
+    transform: translate(-8px, -8px);
+    font-family: Loto, helvetica, sans-serif;
     font-size: 12px; }
 
 .imgExpandCollapse {
-  background: url("../../images/icons/expandCollapse.png") no-repeat;
+  background: url("../img/icons/vertical/../../images/icons/expandCollapse.png") no-repeat;
   background-size: 25px 25px;
   width: 25px;
   height: 25px;

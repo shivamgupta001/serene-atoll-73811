@@ -1,0 +1,417 @@
+/* New Invoice  */
+
+#NewInvoiceFormDiv {
+		    position: relative;
+}
+
+
+.NewInvoiceForm {
+        background: #F1F1F1;
+        height: 550px;
+        position: relative;
+        top: -1px;
+        /*padding: 7px 2px 0px 2px;*/
+        font-family: 'Arial';
+        font-size: 11px;
+}
+    
+
+    #ui-datepicker-div {
+        font-size: 11px !important;
+    }
+
+    .CapitalizeTest{
+        text-transform : uppercase;
+    }
+   
+     
+    /*Model pop up end*/
+
+    #SenderLoyaltyCardNumber {
+        float: left;
+        width: 165px;
+        margin-right: 5px;
+    }
+   /*for pop buttons start*/
+
+    .newInvoicePreviewSummaryCancelButton #CloseSummaryPreview_B .dxbf,
+    .newInvoicePreviewSummaryCancelButton #CloseSummaryPreview_CD:focus,
+    .newInvoicePreviewSummarySaveButton #SaveTransactionFromSummary_B .dxbf,
+    .newInvoicePreviewSummarySaveButton #SaveTransactionFromSummary_CD:focus,
+    #btnCloseGenMsgPopup_B .dxbf,
+    #btnCloseGenMsgPopup_CD:focus,
+    #btnClosePersMsgPopup_B .dxbf,
+    #btnClosePersMsgPopup_CD:focus,
+    #btnCloseAlertMsgPopup_B .dxbf {
+        background: none !important;
+        border: 1px solid white !important;
+        height: 22px;
+        min-width: 39px;
+        padding: 0 9px !important;
+        background-color: #797979 !important;
+    }
+
+    .newInvoicePreviewSummarySaveButton #SaveTransactionFromSummary_B .dxbf,
+    .newInvoicePreviewSummarySaveButton #SaveTransactionFromSummary_CD:focus {
+        background-color: #56b700 !important;
+    }
+
+
+    /*for pop buttons end*/
+
+.testTransactionTest {
+    color: #FF0000;
+    font: bold 16px Tahoma, Geneva, sans-serif;
+}
+
+.newInvoicePreviewSummaryPopup .dxpc-header {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0px !important;
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 31px;
+    margin: 0 !important;
+    padding: 9px 0 0 6px !important;
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+}
+.newInvoicePreviewSummaryYellowHeader .dxeBase {
+    color: #0056a5 !important;
+    font: bold 12px Arial !important;
+    position: relative !important;
+    float: left !important;
+    padding: 7px 0 0 0 !important;
+}
+
+.invoiceOnBehalfOfPopup .dxpc-header {
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 31px;
+    margin: 0 !important;
+    padding: 9px 0 0 10px !important;
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.invoiceAreaSimpleGridPopup .dxpc-header {
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 31px;
+    margin: 0 !important;
+    padding: 9px 0 0 10px !important;
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.loyaltyCardPopup .dxpc-header {
+    background: url("../img/bg/invoice/on_behalf_of_popup_header_bg.jpg") repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #868686 !important;
+    padding: 10px 11px 9px 10px;
+}
+.divInvoicesInHoldHeader{
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 21px !important;
+    margin: 0 !important;
+    padding: 8px 0 0 16px !important;
+    color: #3c3c3c !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Arial !important;
+    text-align: left !important;
+}
+.searchInvoiceTDNameField {
+    padding: 0 10px 0 8px !important;
+    margin: 0 !important;
+}
+.divInvoicesInHoldHeader{
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 21px !important;
+    margin: 0 !important;
+    padding: 8px 0 0 16px !important;
+    color: #3c3c3c !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Arial !important;
+    text-align: left !important;
+}
+/*=======================================================
+17. Invoices in Hold Page - START
+========================================================*/
+.divInvoicesInHold {
+    background-color: #F1F1F1 !important;
+    min-height: 43px !important;
+}
+
+    .divInvoicesInHold .searchInvoiceFilterDivContainer {
+        padding-left: 5px !important;
+    }
+
+    .divInvoicesInHold .fieldValidator {
+        color: #FF0000;
+        font-family: arial;
+        font-size: 11px;
+        position: relative;
+    }
+
+        .divInvoicesInHold .fieldValidator .field-validation-error {
+            left: 3px;
+            position: absolute;
+            top: -16px;
+            min-width: 180px;
+        }
+
+.divInvoicesInHoldHeader {
+}
+
+    .divInvoicesInHoldHeader .dxeBase {
+        color: #3C3C3C !important;
+        font-family: Arial !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+    }
+/*=======================================================
+17. Invoices in Hold Page - END
+========================================================*/
+.divChangePasswordSettingsContent .changePasswordSettingsAreaEdit186px input {
+    width: 172px !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+    font: 11px Arial !important;
+    color: #515151 !important;
+}
+
+.requiredField {
+    background: url('../img/elem/required_field.png') no-repeat;
+}
+.changePasswordSettingsContentDivContainer {
+    padding: 0 0 0 9px !important;
+}
+.searchInvoiceTDNameField {
+    padding: 0 10px 0 8px !important;
+    margin: 0 !important;
+}
+.newInvoicePreviewSummaryPopup .dxpc-header {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0px !important;
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 31px;
+    margin: 0 !important;
+    padding: 9px 0 0 6px !important;
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+}
+.invoiceAreaContainerLeft,
+.complianceContainerLeft {
+    position: relative !important;
+    width: 50%;
+    float: left;
+}
+
+.invoiceAreaContainerRight,
+.complianceContainerRight {
+    width: 50%;
+    float: left;
+}
+
+.invoiceAreaLabelTD,
+.invoiceAreaLabelInlineTD,
+.complianceLabelTD {
+    width: auto;
+    padding: 3px 0 0 12px !important;
+    height: 30px !important;
+}
+
+/**************Change Password***************************/
+
+
+.changePassword-outer{
+                background: #0056a5;
+                position : absolute;
+                top : 0;
+                left : 0;
+                right : 0;
+                bottom : 0;
+                display : flex;
+                display: -ms-flexbox; 
+                display: -webkit-flex;
+                justify-content : center;
+                align-items : center;
+                height: inherit;
+                font: 12px Tahoma, Geneva, sans-serif;
+            }
+            .changePassword-inner{
+                background-color: #F1F1F1;
+                border-radius: 9px 9px 0px 0px ;
+                width : 80%;
+                height : 90%;
+
+            }
+            .logoTransfast{
+                background-color : #0075c8;
+                border-radius: 6px 6px 0px 0px ;
+                text-align: center;
+                padding : 10px 27px 10px 27px;
+            }
+            .formchangePassword-outer{
+                display : flex;
+                display: -ms-flexbox; 
+                display: -webkit-flex;
+                flex-direction : column;
+                align-items : center;
+            }
+            .formchangePassword-child{
+                padding : 5px;
+                
+            }
+            
+            .formchangePassword-child input[type="password"]{
+                border: 3px solid #CFCFCF;
+                border-radius : 3px;
+                padding-left : 0.5em;
+                outline : none;
+                width: 311px;
+                height: 29px;
+                background-color: white;
+            }
+            
+            
+            .formchangePassword-SubmitButton {
+                padding :10px 28px;
+                border : 1px dotted transparent;
+                border-radius : 3px;
+                background: url("btn-login.jpg");
+                color : white;
+                font: 14px Arial ;
+                font-weight: bold ;
+                cursor : pointer;
+            }
+            .formchangePassword-child input:focus{
+                border-color : grey;
+            }
+            
+
+            .formchangePassword-validation{
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+            
+            .formchangePassword-validation-inner{
+                flex : 1;
+                margin: 20px;
+            }
+            
+             .invalidRule{
+                background: url('/Content/css/images/invalid.png');
+                background-size : 15px 15px;
+                background-repeat : no-repeat;
+                padding-left : 20px;
+                list-style-type: none;
+            }
+            .validRule{
+                background: url('/Content/css/images/valid.png');
+                background-size : 15px 15px;
+                background-repeat : no-repeat;
+                padding-left : 20px;
+                list-style-type: none;
+            }
+            .changePassword-outer .err-msg{
+                color : red;
+                font-size: 13px;
+            }   
+                
+            .changePassword-outer .mandatory{
+                
+                color: red;
+            }
+#SubmitChangePassword:focus {
+   color: black;
+}
+.flex-container {
+    display: flex;
+}
+.userCreateCancelContainer
+{
+    float: left;
+    padding-left: 5px;
+}
+.userCreateSaveContainer
+{
+   float: right;    
+   padding-right: 5px;
+}
+.securityFormSubmitBtn{
+     float: right;
+    margin: 10px 0 !important;
+    border: none;
+    min-width: 100px;
+    height: 39px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    /*behavior: url('../../Scripts/js/roundCornerIE.htc') !important;*/
+    background: url('../img/btn/btn-login.jpg') repeat-x scroll left top transparent;
+    color: white !important;
+    border: 0 !important;
+    color: black !important;
+}
+.searchInvoicePanel{
+    height: 53px !important;
+    background-color: #F1F1F1 !important;
+    border: 0 !important;
+}
+.searchInvoiceLabel {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.searchInvoiceLabel {
+    font-size: 11px !important;
+    font-family: 'Arial' !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+    padding: 2px 0 0 0 !important;
+    margin: 0 5px 0 0 !important;
+    display: block !important;
+    position: relative !important;
+    float: left !important;
+}
+#frmPayerSearch {
+    font-family: 'Arial' !important;
+    font-size: 11px !important;
+}
+.divInvoicesInHold {
+    background-color: #F1F1F1 !important;
+    min-height: 43px !important;
+}
+.divInvoicesInHold .searchInvoiceFilterDivContainer {
+    padding-left: 5px !important;
+}
+.customContainerPayerSearch {
+    padding-top: 13px !important;
+}

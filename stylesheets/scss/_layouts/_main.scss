@@ -1,23 +1,17 @@
 #tf-app{
-	position: fixed;
-	top : 0px;
-	left : 0px;
-	right : 0px;
-	bottom: 0px;
-	display: flex;
-	flex-direction: column;
+	@include positionFixed();
+	@include flexColumn();
 }
 #tf-app-body{
 	flex : 1;
-	display: flex;
-	flex-flow: row wrap;
+	@include flexRow();
 }
 #tf-app-body-content{
 	flex : 1;
-	overflow : auto;
-	position : relative;
+	position: relative;
+	background-color: $color-layout-ter;
 }
 #tf-app-footer{
-	height: 0px;
+	height: 0px; // set height of footer , might require to change bottom of left and right menu
 	background-color: $color-layout-pri;
 }

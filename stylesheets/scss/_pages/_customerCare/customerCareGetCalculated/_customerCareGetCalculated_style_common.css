@@ -1,0 +1,12 @@
+.divInvoicesInHoldHeader{
+    border-bottom: 1px solid #868686 !important;
+    background: url('../img/bg/invoice/on_behalf_of_popup_header_bg.jpg');
+    height: 21px !important;
+    margin: 0 !important;
+    padding: 8px 0 0 16px !important;
+    color: #3c3c3c !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Arial !important;
+    text-align: left !important;
+}

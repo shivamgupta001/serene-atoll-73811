@@ -1,16 +1,15 @@
 #tf-app-header{
-	display: flex;
-	flex-flow : row wrap;
-	height: 56px;
+
+	@include flexRow();
+	height: 56px;  // height of header if changed , change menu-left top & menu-right top with same value
 	background-color: $color-layout-pri;
-	box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow :$box-shadow-layout;
 }
 #tf-app-header-menu-btn, #tf-app-header-logout, #tf-app-header-complaints{
+	
 	width : 70px;
 	transition: background-color 0.2s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include perfectCenter();
 }
 
 #tf-app-header-menu-btn:hover, #tf-app-header-logout:hover, #tf-app-header-complaints:hover{
@@ -20,25 +19,26 @@
 
 #tf-app-header-logo{
 	flex : 1;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
+	@include verticalCenter();
 }
 
 #tf-app-header-content{
-	flex : 3;
-	height: inherit;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 2px 0px;
+    text-align: right;
 }
 .imgMenuBtn{
-	@include navImg("../../images/icons/HamburgerMenuBtn.png");
+	@include navImg("menu.svg", $svg-icons-header);
 }
 .imgViewComplaint{
-	@include navImgNotification("../../images/icons/Notification.png" , blue);	
+	@include navImgNotification("bell.svg" , $svg-icons-header , $color-notify-bg-3);	
 }
-.imgSignOut{
-	@include navImg("../../images/icons/SignOut.png");		
+#tf-app-header-logout{
+	color : $color-layout-text;
+	text-align : center;
+}
+#tf-app-header-logout a{
+	color : $color-layout-text;
+	line-height:56px;
+	text-decoration:none;
+	width:100%;
 }

@@ -1,0 +1,288 @@
+/*stylesheet 1/4 | https://web2qa.transfast.net/DXR.axd?r=1_10,1_12,1_1,1_4,1_5,1_3,1_8,1_7,1_9,1_2,1_11,9_18,9_19,9_21,9_20,9_1,9_17,9_0,9_16,6_1,6_2,6_0-N18Wa*/
+
+img {
+    border-width: 0px;
+}
+
+img[class^="dx"] {
+    max-width: none;
+}
+
+.dxsplPane {
+    border: 0px solid #8c8c8c;
+}
+
+.dxsplPane {
+    border-width: 1px;
+}
+
+.dxEditors_edtError {
+    background-image: url("https://web2qa.transfast.net/DXR.axd?r=1_45-J18Wa");
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxEditors_edtError {
+    background-position: -96px -146px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtError {
+    display: block;
+    margin: auto;
+}
+
+.dxeBase {
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: normal;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+/*stylesheet 2/4 | https://web2qa.transfast.net/Content/css/css?v=RS0-CgM_eJj3WJ_FAWknwRW4ekoC6QjLP0RcyF5gvEM1*/
+
+table {
+    border-spacing: 0px !important;
+    border-collapse: collapse !important;
+}
+
+.WorkPane {
+    position: relative !important;
+    background-color: #0056a5 !important;
+}
+
+#MainContentSplitter_0 {
+    overflow: visible !important;
+}
+
+.divSearchInvoiceResults {
+    margin: 0px 8px 0px 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.divInvoicesInHoldHeader {
+    background: url("https://web2qa.transfast.net/Content/css/../img/bg/invoice/on_behalf_of_popup_header_bg.jpg");
+    border-bottom: 1px solid #868686 !important;
+    height: 21px !important;
+    margin: 0px !important;
+    padding: 8px 0px 0px 16px !important;
+    color: #3c3c3c !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Arial !important;
+}
+
+.searchInvoiceLabel {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.searchInvoiceTD {
+    padding: 0px 10px 0px 8px !important;
+    margin: 0px !important;
+}
+
+.searchInvoiceFilterDivContainer {
+    min-height: 44px !important;
+    padding-left: 0px !important;
+    padding-top: 19px !important;
+}
+
+.searchInvoiceFilterDivContainer .searchCustomButton {
+    padding-left: 10px;
+}
+
+.searchInvoiceLabel {
+    font-size: 11px !important;
+    font-family: Arial !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    padding: 2px 0px 0px !important;
+    margin: 0px 5px 0px 0px !important;
+    display: block !important;
+    position: relative !important;
+    float: left !important;
+}
+
+.invoiceAreaSimpleGridPopup {
+    width: 100%;
+    float: left;
+}
+
+.divInvoicesInHold {
+    background-color: #f1f1f1 !important;
+    min-height: 43px !important;
+}
+
+.divInvoicesInHold .searchInvoiceFilterDivContainer {
+    padding-left: 5px !important;
+}
+
+.divInvoicesInHoldHeader {}
+
+.lineSpacing {
+    vertical-align: top;
+}
+
+.divInvoicesInHoldHeader {
+    text-align: left !important;
+}
+
+.searchInvoiceTD:hover {
+    cursor: pointer;
+}
+
+.text-field {
+    width: 195px;
+    text-transform: uppercase;
+    height: 20px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0px 8px 0px 5px !important;
+    font-size: 11px !important;
+    font-family: Arial !important;
+    border: 1px solid #c7c7c7 !important;
+}
+
+.dropdown-field {
+    width: 208px;
+    height: 23px;
+    font-size: 11px !important;
+    font-family: Arial !important;
+    padding: 2px 8px 3px 5px !important;
+}
+
+.error-img {
+    max-width: none;
+    float: right;
+    display: none;
+    vertical-align: text-top;
+    position: absolute;
+    right: 2px;
+    top: 3px;
+}
+
+.RequiredField {
+    background: url("https://web2qa.transfast.net/Content/img/elem/required_field.png") 4px no-repeat;
+    width: 10px !important;
+}
+
+.btn-Common {
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    height: 24px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-Green {
+    background: url("https://web2qa.transfast.net/Content/img/btn/invoice/green_button_bg.png") repeat-x !important;
+    border: 1px solid #56b700 !important;
+}
+
+.btn-Green:hover {
+    background: none #56b700 !important;
+    border: 1px solid #d4ffaa !important;
+}
+
+.fright {
+    float: right;
+}
+
+.td-field-span {
+    white-space: nowrap;
+    float: left !important;
+}
+
+.searchInvoiceTD > .RequiredField {
+    float: left !important;
+    min-height: 10px !important;
+}
+
+.td-field-span > .error-img {
+    position: inherit !important;
+    margin: 2px 0px 0px 2px !important;
+}
+
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    user-select: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 8px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select2-hidden-accessible {
+    border: 0px !important;
+    clip: rect(0px 0px 0px 0px) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0px !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 22px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 16px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0px;
+    height: 0px;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0px;
+}
+
+
+/*stylesheet 3/4 | inline*/
+
+
+/*stylesheet 4/4 | inline*/
