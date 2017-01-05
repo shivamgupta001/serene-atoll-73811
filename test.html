@@ -1,730 +1,111 @@
-<script type="text/javascript">
-    (function () {
-
-        /* create invoice header start*/
-
-        var searchLabel = TFLib.TFContainer.call({
-
-            tagName: 'label',
-            compClass : 'invoiceSenderLabel',
-            innerText: 'SEARCH CUSTOMER'
-        });
-
-        var senderName = TFLib.TFComboboxField.call({
-
-            displayLabel: 'none',
-            compClass : ['flexCenter','alignSelfCenter']
-        });
-        $(senderName.shared.innerComp).select2();
-
-        var senderSearch = TFLib.TFTextField.call({
-
-            displayLabel: 'none',
-            compClass : ['flexCenter','alignSelfCenter'],
-            buttons : [{
-                btnClass : 'tf-search-btn'
-            }]
-        });
-
-        var countryRate = TFLib.TFTextField.call({
-
-            displayLabel: 'none',
-            compClass : ['flexCenter','alignSelfCenter'],
-            attributes : {
-                placeholder : 'Enter Country for Rate'
-            },
-            buttons : [{
-                btnClass : 'tf-search-btn'
-            }]
-        });
-
-        var lastInvoice = TFLib.TFButton.call({
-            btnText: 'LAST INVOICE<span class="lastInvoiceImg"></span>',
-            btnClass : ['lastInvoiveBtn']
-            
-        });
-
-        /* create invoice header end*/
-
-
-
-        /*create invoice body SENDER INFORMATION  start*/
-
-        var senderInfoLabel = TFLib.TFContainer.call({
-
-            innerHTML: '<span>Step1 : SENDER INFORMATION</span>',
-            compClass: 'createInvoiceLabel'
-        });
-
-        var SIName = TFLib.TFTextField.call({
-            
-            fieldLabel : 'Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            },
-            buttons : [{
-                btnClass : 'tf-search-btn'
-            },{
-                btnClass : 'tf-language-btn'
-            }]
-        });
-
-        var SIMobile = TFLib.TFTextField.call({
-            fieldLabel : 'Mobile',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #container {
+                position:absolute;
+                background-color: blue;
+                }
+            #elem{
+                position: absolute;
+                background-color: green;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                -ms-user-select: none;
+                -khtml-user-select: none;     
+                user-select: none;
             }
-        });
+        </style>
+       
+    </head>
+    <body>
+        <div id='container' style="width: 600px;height: 400px;top:50px;left:50px;">     
+            <div id="elem" style="width: 200px;height: 100px;">
+                <div style='width:100%;height:100%;padding:10px'>
+                <select id=test>
+                    <option value=1>first
+                    <option value=2>second
+                </select>
+                <INPUT TYPE=text value="123">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var Draggable = function(){
 
-        var SIAddress = TFLib.TFTextField.call({
-            fieldLabel : 'Address',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }
-        });
+                var draggable = {
 
-        var SIZip = TFLib.TFTextField.call({
-            fieldLabel : 'Zip',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-
-        var SICountry = TFLib.TFComboboxField.call({
-            fieldLabel : 'Country',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-
-        var SIState = TFLib.TFComboboxField.call({
-            fieldLabel : 'State',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var SICity = TFLib.TFComboboxField.call({
-            fieldLabel : 'City',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var SIHomeNumber = TFLib.TFTextField.call({
-            fieldLabel : 'Home Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var SIWorkNumber = TFLib.TFTextField.call({
-            fieldLabel : 'Work Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var SIIDType = TFLib.TFComboboxField.call({
-            fieldLabel : 'ID Type',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var SIIDNumber = TFLib.TFTextField.call({
-            fieldLabel : 'ID Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var SIIDExpirationdate = TFLib.TFTextField.call({
-            fieldLabel : 'ID Expiration Date',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var SIDOB = TFLib.TFTextField.call({
-            fieldLabel : 'DOB',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var SINationality = TFLib.TFComboboxField.call({
-            fieldLabel : 'Nationality',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-
-        });
-        var SIEmail = TFLib.TFTextField.call({
-            fieldLabel : 'Email',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'            
-        });
-        var SIEntityType = TFLib.TFCheckboxField.call({
-            fieldLabel : 'Entity Type',
-            fieldLayout : 'column',
-            groupLayout : 'row',
-            fieldGroup : [{
-                fieldLabel : 'Individual',
-                checked : true
-            },{
-                fieldLabel : 'Company'
-            }]
-        });
-
-        /*create invoice body SENDER INFORMATION  end*/
-
-
-        /*create invoice body RECEIVER INFORMATION  start*/
-
-        var receiverInfoLabel = TFLib.TFContainer.call({
-
-            innerHTML: '<span>Step2 : RECEIVER INFORMATION</span>',
-            compClass: 'createInvoiceLabel'
-        });
-
-        var RIFirstName = TFLib.TFTextField.call({
-            fieldLabel : 'First Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            },
-            buttons : [{
-                btnClass : 'tf-search-btn'
-            },{
-                btnClass : 'tf-language-btn'
-            }]
-        });
-
-        var RISecondName = TFLib.TFTextField.call({
-            fieldLabel : 'Second Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-
-        var RILastName = TFLib.TFTextField.call({
-            fieldLabel : 'Last Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            },
-            buttons : [{
-                btnClass : 'tf-search-btn'
-            },{
-                btnClass : 'tf-language-btn'
-            }] 
-        });
-        var RISecondLastName = TFLib.TFTextField.call({
-            fieldLabel : 'Second Last Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-
-        var RICompleteAddress = TFLib.TFTextField.call({
-            fieldLabel : 'Complete Address',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' ,
-            buttons : [{
-                btnClass : 'tf-language-btn'
-            }] 
-        });
-        var RICountry = TFLib.TFComboboxField.call({
-            fieldLabel : 'Country',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var RIMobile = TFLib.TFComboboxField.call({
-            fieldLabel : 'Mobile',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }  
-        });
-        var RIHomeNumber = TFLib.TFTextField.call({
-            fieldLabel : 'Home Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RIWorkNumber = TFLib.TFTextField.call({
-            fieldLabel : 'Work Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RIDOB = TFLib.TFTextField.call({
-            fieldLabel : 'DOB',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RINationality = TFLib.TFTextField.call({
-            fieldLabel : 'Nationality',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RIEmail = TFLib.TFTextField.call({
-            fieldLabel : 'Email',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var RINotes = TFLib.TFTextAreaField.call({
-            fieldLabel : 'Notes',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var RIEntity = TFLib.TFCheckboxField.call({
-            fieldLabel : 'Entity Type',
-            fieldLayout : 'row',
-            groupLayout : 'row',
-            fieldGroup : [{
-                fieldLabel : 'Individual',
-                checked : true
-            },{
-                fieldLabel : 'Company'
-            }]
-        });
-
-        /*create invoice body RECEIVER INFORMATION  end*/
-
-        /*create invoice body RECEIVER DETAIL  start*/
-
-        var receiverDetailLabel = TFLib.TFContainer.call({
-
-            innerHTML: '<span>Step3 : RECEIVER DETAIL</span>',
-            compClass: 'createInvoiceLabel'
-        });
-        var RDCountry = TFLib.TFComboboxField.call({
-            fieldLabel : 'Country',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var RDCashPickup = TFLib.TFCheckbox.call({
-            fieldLabel : 'Cash Pickup Anywhere'
-        });
-        var RDBankRouting = TFLib.TFCheckbox.call({
-            fieldLabel : 'Cash Pickup Anywhere'
-        });
-        var RDState = TFLib.TFComboboxField.call({
-            fieldLabel : 'State',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }
-        });
-        var RDCity = TFLib.TFComboboxField.call({
-            fieldLabel : 'City',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var RDTown = TFLib.TFComboboxField.call({
-            fieldLabel : 'Town',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDPaymentMode = TFLib.TFComboboxField.call({
-            fieldLabel : 'PaymentMode',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' ,
-            validations : {
-                    'isRequired' : { value : true}
-            }
-        });
-        var RDReceiveCurrency = TFLib.TFComboboxField.call({
-            fieldLabel : 'Receive Currency',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var RDPurposeOfRemittance = TFLib.TFComboboxField.call({
-            fieldLabel : 'Purpose of Remittance',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            } 
-        });
-        var RDBankName = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDBankBranch = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Branch',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDBankAccount = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Account',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDAccountType = TFLib.TFTextField.call({
-            fieldLabel : 'Account Type',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDCPF = TFLib.TFTextField.call({
-            fieldLabel : 'CPF',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDIFSC = TFLib.TFTextField.call({
-            fieldLabel : 'IFSC',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDBankBranchName = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Branch Name',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDBankBranchCity = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Branch City',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDBankBranchState = TFLib.TFTextField.call({
-            fieldLabel : 'Bank Branch State',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDRegistartionNumber = TFLib.TFTextField.call({
-            fieldLabel : 'Registration Number',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var RDSenderTaxID = TFLib.TFTextField.call({
-            fieldLabel : 'Sender Tax ID',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        /*create invoice body RECEIVER DETAIL  end*/
-
-        /*create invoice body PAYOUT DETAIL  start*/
-
-        var payoutDetailLabel = TFLib.TFContainer.call({
-
-            innerHTML: '<span>Step4 : PAYOUT DETAIL</span>',
-            compClass: 'createInvoiceLabel'
-        });
-        var PDSelectPayer = TFLib.TFTextField.call({
-            fieldLabel : 'Select Payer',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }  
-        });
-        var PDPayingAgent = TFLib.TFTextField.call({
-            fieldLabel : 'Paying Agent',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'            
-        });
-        var PDRate = TFLib.TFTextField.call({
-            fieldLabel : 'Rate',
-            fieldLayout : 'column', 
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'            
-        });
-        var PDSourceCurrency = TFLib.TFTextField.call({
-            fieldLabel : 'Source Currency',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'             
-        });
-        var PDSendAmount = TFLib.TFTextField.call({
-            fieldLabel : 'Send Amount',
-            fieldLayout: 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }              
-        });
-        var PDTotalReceiveAmount = TFLib.TFTextField.call({
-            fieldLabel : 'Total Receive Amount',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField',
-            validations : {
-                    'isRequired' : { value : true}
-            }
-        });
-        var PDServiceFee = TFLib.TFTextField.call({
-            fieldLabel : 'Service Fee',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'
-        });
-        var PDProductOption = TFLib.TFTextField.call({
-            fieldLabel : 'Product Option',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var PDFeeRate = TFLib.TFTextField.call({
-            fieldLabel : 'Fee Rate',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var PDSetHandling = TFLib.TFTextField.call({
-            fieldLabel : 'Set Handling',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var PDCouponCode = TFLib.TFTextField.call({
-            fieldLabel : 'Coupon Code',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var PDDiscount = TFLib.TFTextField.call({
-            fieldLabel : 'Discount',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField' 
-        });
-        var PDAmountToPay = TFLib.TFTextField.call({
-            fieldLabel : 'Amount To Pay',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'  
-        });
-        var PDFormOfPayment = TFLib.TFTextField.call({
-            fieldLabel : 'Form Of Payment',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'  
-        });
-        var PDEnterCashAmount = TFLib.TFTextField.call({
-            fieldLabel : 'Enter Cash Amount',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'   
-        });
-        var PDEnterDebitCard = TFLib.TFTextField.call({
-            fieldLabel : 'Enter Debit/Credit Card',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'   
-        });
-        var PDApprovalCode = TFLib.TFTextField.call({
-            fieldLabel : 'Approval Code',
-            fieldLayout : 'column',
-            labelClass : 'createInvoiceTextFieldLabel',
-            controlClass : 'createInvoiceTextField'   
-        });
-        /*create invoice body PAYOUT DETAIL  end*/
-
-        /*create invoice footer left start*/
-
-        var fsaveTransaction = TFLib.TFButton.call({
-            btnText : 'SAVE TRANSACTION',
-            btnClass : ['createInvoiceBtn','saveTransBg']
-            
-        });
-        var fpreviewSummary = TFLib.TFButton.call({
-            btnText : 'PREVIEW SUMMARY',
-            btnClass : 'createInvoiceBtn'
-        });
-        var ftest = TFLib.TFCheckbox.call({
-            fieldLabel : 'TEST',
-            compClass : 'ftestCheckbox'
-            
-        });
-        var fnew = TFLib.TFButton.call({
-            btnText : 'NEW TRANSACTION',
-            btnClass : 'createInvoiceBtn'
-        });
-        var fscanUpload = TFLib.TFButton.call({
-            btnText : 'SCAN/UPLOAD',
-            btnClass : 'createInvoiceBtn'
-        });
-        /*create invoice footer left end*/
-
-        TFLib.Iterator({
-
-            // create invoice
-            compClass: 'tf-position--abs0000',
-            layout: 'column',
-            items: [{
-
-                // header
-                compClass: 'createInvoiceHeader',
-                layout: 'row',
-                items: [{
-                    flex: 1,
-                    layout: 'row',
-                    items: [
-
-                        searchLabel,
-                        senderName,
-                        senderSearch
-
-                    ]
-                }, {
-                    compClass : 'createInvoiceHeaderLine'
-                }, {
-                    flex: 1,
-                    layout: 'row',
-                    items: [
-
-                        countryRate,
-                        lastInvoice
-                    ]
-                }]
-
-            }, {
-
-                //body
-                compClass: 'createInvoiceBody',
-                layout: 'row',
-                items: [{
-                    flex: 1,
-                    layout: 'column',
-                    items: [{
-
-                        // sender information
-
-                        compClass : 'createInvoiceBlock--margin',
-                        items: [
-
-                            senderInfoLabel,
-                            SIName,
-                            SIMobile,
-                            SIAddress
-
-                        ]
-
-                    }, {
-
-                        // receiver detail
-
-                        compClass : 'createInvoiceBlock--margin',
-                        items: [
-
-                            receiverDetailLabel
-                        ]
-
-                    }]
-                }, {
-                    compClass : 'createInvoiceBodyLine'
-                }, {
-                    flex: 1,
-                    layout: 'column',
-                    items: [{
-
-                        // receiver information
-
-                        compClass : 'createInvoiceBlock--margin',
-                        items: [
-
-                            receiverInfoLabel
-                        ]
-                    }, {
-
-                        //payout details
-
-                        compClass : 'createInvoiceBlock--margin',
-                        items: [
-
-                            payoutDetailLabel
-                        ]
-                    }]
-                }]
-
-            }, {
-                // footer
-                compClass: 'createInvoiceHeader',
-                layout: 'row',
-                items: [{
-                    flex: 1,
-                    layout: 'row',
-                    styles : {
-                        alignItems : 'center'
+                    scope : this,
+                    _init : function(){
+                        this._initialize();
+                        this._bindEvents();
                     },
-                    items: [
+                    _initialize : function(){
+                        
+                        var me = this.scope;
+                        // child width , height , (X, Y)
+                        this.childEl = document.getElementById(me.childId);
 
-                        fnew,
-                        fscanUpload
-
-                    ]
-                },{
-                    flex: 1,
-                    layout: 'row',
-                    styles : {
-                        alignItems : 'center',
-                        justifyContent : 'space-around'
+                        // parent width , height , (X, Y) 
+                        this.parentEl =document.getElementById(me.parentId);
                     },
-                    items: [
-                        ftest,
-                        fpreviewSummary,
-                        fsaveTransaction
+                    _bindEvents : function(){
 
-                    ]
-                }]
-            }]
-        }).appendTo('#tf-app-body-content');
-    })();
-</script>
+                        this.childEl.addEventListener('mousedown', this._handleMouseDown);
+                        this.childEl.addEventListener('mouseup', this._handleMouseUp);
+                        document.addEventListener('mousemove', this._handleMouseMove);
+                    },
+                    _handleMouseDown : function(e){
+
+                        evt = evt || window.event;
+                        var posX = evt.clientX,
+                            posY = evt.clientY,
+                        divTop = divid.style.top,
+                        divLeft = divid.style.left,
+                        eWi = parseInt(divid.style.width),
+                        eHe = parseInt(divid.style.height),
+                        cWi = parseInt(document.getElementById(container).style.width),
+                        cHe = parseInt(document.getElementById(container).style.height);
+                        document.getElementById(container).style.cursor='move';
+                        divTop = divTop.replace('px','');
+                        divLeft = divLeft.replace('px','');
+                        var diffX = posX - divLeft,
+                            diffY = posY - divTop;
+                        debugger;
+                    },
+                    _handleMouseMove : function(e){
+                        
+                        evt = evt || window.event;
+                            var posX = evt.clientX,
+                                posY = evt.clientY,
+                                aX = posX - diffX,
+                                aY = posY - diffY;
+                                if (aX < 0) aX = 0;
+                                if (aY < 0) aY = 0;
+                                if (aX + eWi > cWi) aX = cWi - eWi;
+                                if (aY + eHe > cHe) aY = cHe -eHe;
+                            this._move(divid,aX,aY);            
+                    },
+                    _handleMouseUp : function(e){
+                        document.removeEventListener('mousemove', this._handleMouseMove);  
+                    },
+                    _move : function(divid,xpos,ypos){
+                        divid.style.left = xpos + 'px';
+                        divid.style.top = ypos + 'px';
+                    }
+                };
+                draggable._init();
+            };
+
+            Draggable.call({
+                childId : 'elem',
+                parentId : 'container'
+            });
+        </script>
+         <script>
+            
+
+        </script>  
+    </body>
+</html>
